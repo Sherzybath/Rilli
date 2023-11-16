@@ -160,6 +160,11 @@
       <div class="even"></div> -->
     </div>
     <script>
+      function pageLoad() {
+        displayDay();
+        displayDate();
+        updateWeekNumbers();
+      }
       function updateWeekNumbers() {
         const currentDate = new Date();
         const labels = document.querySelectorAll(
