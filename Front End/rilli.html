@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="pret.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-size: 35px;
+        font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 200, "opsz" 98;
+      }
+    </style>
+  </head>
+  <body onload="pageLoad()">
+    <style type="text/css"></style>
+    <div class="parent">
+      <div class="navy">
+        <div class="logo">
+          <img class="GolGol" src="images/logo.png" />
+        </div>
+        <div class="log1"><img class="DP" src="images/New_Me.png" /></div>
+        <div class="log2">
+          <label class="DAY" id="current-day"></label
+          ><label class="NO" id="current-date"></label>
+        </div>
+        <div class="log3">
+          <i class="bx bx-sun bx-md" style="color: #c8a366"></i>
+        </div>
+        <div class="log4" onclick="window.close()">
+          <i class="bx bx-log-out bx-md"></i>
+        </div>
+        <div class="bor1"></div>
+        <div class="bor2"></div>
+        <div class="bor3"></div>
+        <div class="ril">
+          <label class="rills">RILLI</label>
+        </div>
+      </div>
+      <div class="Todo">
+        <h1>Todo List</h1>
+        <div class="button_minus" onclick="removeLastExpandableDiv()"></div>
+        <div class="button_plus" onclick="createExpandableDiv()"></div>
+        <div id="expandable-container">
+          <!-- Existing expandable divs or new ones will be added here -->
+        </div>
+      </div>
+
+      <div class="Main">
+        <div class="calendar">
+          <div class="top">
+            <h3>November 2023 /</h3>
+            <button class="style-3" id="nextWeek">Prev</button>
+            <button class="style-4" id="prevWeek">Next</button>
+          </div>
+          <div class="NONE days-1">SUN</div>
+          <div class="NONE days-2">MON</div>
+          <div class="NONE days-3">TUE</div>
+          <div class="NONE days-4">WED</div>
+          <div class="NONE days-5">THU</div>
+          <div class="NONE days-6">FRI</div>
+          <div class="NONE days-7">SAT</div>
+          <!-- Numbers -->
+          <label class="NONE sun dayN"></label>
+          <label class="NONE mon dayN"></label>
+          <label class="NONE tue dayN"></label>
+          <label class="NONE wed dayN"></label>
+          <label class="NONE thu dayN"></label>
+          <label class="NONE fri dayN"></label>
+          <label class="NONE sat dayN"></label>
+          <div class="bars">
+            <div class="bars2">
+              <!--Borders-->
+              <div class="bord bord1"></div>
+              <div class="bord bord2"></div>
+              <div class="bord bord3"></div>
+              <div class="bord bord4"></div>
+              <div class="bord bord5"></div>
+              <div class="bord bord6"></div>
+              <div class="bord bord7"></div>
+              <div class="bord bord8"></div>
+              <div class="bord bord9"></div>
+              <div class="bord bord10"></div>
+              <div class="bord bord11"></div>
+              <div class="bord bord12"></div>
+              <div class="bord bord13"></div>
+              <div class="bord bord14"></div>
+              <div class="bord bord15"></div>
+              <div class="bord bord16"></div>
+              <div class="bord bord17"></div>
+              <div class="bord bord18"></div>
+              <div class="bord bord19"></div>
+              <div class="bord bord20"></div>
+              <div class="bord bord21"></div>
+              <div class="bord bord22"></div>
+              <div class="bord bord23"></div>
+              <div class="bord bord24"></div>
+              <div class="bord bord25"></div>
+              <div class="bord bord26"></div>
+
+              <!--Timings-->
+              <div class="time All">All day</div>
+              <div class="time AM12">12 AM</div>
+              <div class="time AM1">01 AM</div>
+              <div class="time AM2">02 AM</div>
+              <div class="time AM3">03 AM</div>
+              <div class="time AM4">04 AM</div>
+              <div class="time AM5">05 AM</div>
+              <div class="time AM6">06 AM</div>
+              <div class="time AM7">07 AM</div>
+              <div class="time AM8">08 AM</div>
+              <div class="time AM9">09 AM</div>
+              <div class="time AM10">10 AM</div>
+              <div class="time AM11">11 AM</div>
+              <div class="time PM12">12 PM</div>
+              <div class="time PM1">01 PM</div>
+              <div class="time PM2">02 PM</div>
+              <div class="time PM3">03 PM</div>
+              <div class="time PM4">04 PM</div>
+              <div class="time PM5">05 PM</div>
+              <div class="time PM6">06 PM</div>
+              <div class="time PM7">07 PM</div>
+              <div class="time PM8">08 PM</div>
+              <div class="time PM9">09 PM</div>
+              <div class="time PM10">10 PM</div>
+              <div class="time PM11">11 PM</div>
+              <div class="time AM00">00 AM</div>
+
+              <!-- BOXES -->
+              <div class="slot1 Practical">
+                <div class="Prac">Practical</div>
+              </div>
+
+              <div class="slot2 Tutorial">
+                <div class="Tut">Tutorial</div>
+              </div>
+              <div class="slot3 Lecture">
+                <div class="Lect">Lecture</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="curr"></div>
+      <div class="even"></div> -->
+    </div>
+    <script>
+      function updateWeekNumbers() {
+        const currentDate = new Date();
+        const labels = document.querySelectorAll(
+          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+        );
+
+        // Calculate the start of the current week (Sunday)
+        const startDate = new Date(currentDate);
+        startDate.setDate(currentDate.getDate() - currentDate.getDay());
+
+        // Loop through the labels and update their text content with day numbers
+        labels.forEach((label, index) => {
+          const date = new Date(startDate);
+          date.setDate(startDate.getDate() + index);
+          const dayNumber = date.getDate();
+
+          // Wrap around for days below 1 (previous month) or above 31 (next month)
+          label.textContent =
+            dayNumber <= 0
+              ? 31 + dayNumber
+              : dayNumber > 31
+              ? dayNumber - 31
+              : dayNumber;
+        });
+      }
+
+      // Function to show the next week's day numbers
+      function showNextWeek() {
+        const labels = document.querySelectorAll(
+          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+        );
+
+        labels.forEach((label) => {
+          const currentNumber = parseInt(label.textContent);
+          label.textContent =
+            currentNumber + 7 > 31 ? currentNumber + 7 - 31 : currentNumber + 7;
+        });
+      }
+
+      // Function to show the previous week's day numbers
+      function showPreviousWeek() {
+        const labels = document.querySelectorAll(
+          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+        );
+
+        labels.forEach((label) => {
+          const currentNumber = parseInt(label.textContent);
+          label.textContent =
+            currentNumber - 7 < 1 ? currentNumber - 7 + 31 : currentNumber - 7;
+        });
+      }
+
+      // Add event listeners to the Next and Previous Week buttons
+      document
+        .getElementById("nextWeek")
+        .addEventListener("click", showNextWeek);
+      document
+        .getElementById("prevWeek")
+        .addEventListener("click", showPreviousWeek);
+
+      // Initial call to display the current week's day numbers
+      updateWeekNumbers();
+    </script>
+    <script src="faltu.js"></script>
+  </body>
+</html>

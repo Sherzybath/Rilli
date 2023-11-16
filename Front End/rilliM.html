@@ -1,0 +1,513 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="pret2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-size: 35px;
+        font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 200, "opsz" 98;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:600"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+  </head>
+  <body onload="pageLoad()">
+    <style type="text/css"></style>
+
+    <div id="mydiv">
+      <div class="conCon">
+        <div class="tt">
+          <button class="item-5" id="changeZIndexButton2"></button>
+        </div>
+        <form action="">
+          <div class="tName fle">
+            <div class="input-box">
+              <input
+                type="text"
+                class="input"
+                id="username"
+                placeholder="نام کاربری"
+                required
+              />
+              <label for="username">Name</label>
+            </div>
+          </div>
+          <div class="sSubject fle">
+            <div class="input-box">
+              <input
+                type="password"
+                class="input"
+                id="password"
+                placeholder="Subject"
+                required
+              />
+              <label for="p">Subject</label>
+            </div>
+          </div>
+          <div class="roomC fle">
+            <div class="input-box">
+              <input
+                type="password"
+                class="input"
+                id="password"
+                placeholder="Subject"
+                required
+              />
+              <label for="p">Room Code</label>
+            </div>
+          </div>
+          <div class="dayI fle">
+            <div class="wrapper-dropdown" id="dropdown">
+              <span class="selected-display" id="destination">Weekday</span>
+              <svg
+                class="arrow"
+                id="drp-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all ml-auto rotate-180"
+              >
+                <path
+                  d="M7 14.5l5-5 5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <ul class="dropdown">
+                <li class="item">Monday</li>
+                <li class="item">Tuesday</li>
+                <li class="item">Wednesday</li>
+                <li class="item">Thursday</li>
+                <li class="item">Friday</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rangeT fle">
+            <input type="time" id="time1" name="time1" />
+            <span>------</span>
+            <input type="time" id="time2" name="time2" />
+          </div>
+
+          <div class="sub fle">
+            <div class="input-box">
+              <input type="submit" class="btn-submit" value="Submit" required />
+              <div class="notifi"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="parent">
+      <div class="navy">
+        <div class="logo" id="sid">
+          <img
+            class="GolGol"
+            src="images/logo.png"
+            onclick="toggleFunction()"
+          />
+        </div>
+        <div class="log1"><img class="DP" src="images/New_Me.png" /></div>
+        <div class="log2">
+          <label class="DAY" id="current-day"></label
+          ><label class="NO" id="current-date"></label>
+        </div>
+        <div class="log3" id="Theme">
+          <i class="bx bx-sun bx-md"></i>
+        </div>
+        <div class="log4" onclick="window.close">
+          <i class="bx bx-log-out bx-md"></i>
+        </div>
+        <div class="bor1"></div>
+        <div class="bor2"></div>
+        <div class="bor3"></div>
+        <div class="ril">
+          <label class="rills">RILLI</label>
+        </div>
+      </div>
+      <div class="Todo" id="TD">
+        <div class="hh opa">
+          <h1><span>Class List</span></h1>
+        </div>
+        <div class="dd opa year">
+          <h2>Year</h2>
+
+          <div class="center">
+            <div class="container">
+              <div class="setting-description">
+                <div
+                  class="setting-description-text"
+                  style="margin-left: 15px"
+                ></div>
+              </div>
+              <div class="wrapper-dropdown" id="dropdown">
+                <span class="selected-display" id="destination"></span>
+                <svg
+                  class="arrow"
+                  id="drp-arrow"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="transition-all ml-auto rotate-180"
+                >
+                  <path
+                    d="M7 14.5l5-5 5 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <ul class="dropdown">
+                  <li class="item">1st Year</li>
+                  <li class="item">2nd Year</li>
+                  <li class="item">3rd Year</li>
+                  <li class="item">4th Year</li>
+                </ul>
+              </div>
+              <br />
+              <div class="setting-description">
+                <div class="setting-description-text" style="margin-left: 15px">
+                  <h10></h10>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dd opa group">
+          <h2>Group</h2>
+          <div class="wrapper-dropdown" id="dropdown">
+            <span class="selected-display" id="destination"></span>
+            <svg
+              class="arrow"
+              id="drp-arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="transition-all ml-auto rotate-180"
+            >
+              <path
+                d="M7 14.5l5-5 5 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <ul class="dropdown">
+              <li class="item">G4</li>
+              <li class="item">G5</li>
+              <li class="item">G6</li>
+              <li class="item">G7</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dd opa batch">
+          <h2>Batch</h2>
+          <div class="wrapper-dropdown" id="dropdown">
+            <span class="selected-display" id="destination"></span>
+            <svg
+              class="arrow"
+              id="drp-arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="transition-all ml-auto rotate-180"
+            >
+              <path
+                d="M7 14.5l5-5 5 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <ul class="dropdown">
+              <li class="item">B40</li>
+              <li class="item">B41</li>
+              <li class="item">B42</li>
+              <li class="item">B43</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dd opa course">
+          <h2>Course</h2>
+          <div class="wrapper-dropdown" id="dropdown">
+            <span class="selected-display" id="destination"></span>
+            <svg
+              class="arrow"
+              id="drp-arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="transition-all ml-auto rotate-180"
+            >
+              <path
+                d="M7 14.5l5-5 5 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <ul class="dropdown">
+              <li class="item">CSE</li>
+              <li class="item">Biotech</li>
+              <li class="item">Mechanical</li>
+              <li class="item">Electrical</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dd opa classT">
+          <h2>Class Type</h2>
+          <div class="wrapper-dropdown" id="dropdown">
+            <span class="selected-display" id="destination"></span>
+            <svg
+              class="arrow"
+              id="drp-arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="transition-all ml-auto rotate-180"
+            >
+              <path
+                d="M7 14.5l5-5 5 5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <ul class="dropdown">
+              <li class="item">Tutorial</li>
+              <li class="item">Lecture</li>
+              <li class="item">Practical</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="Main" id="main">
+        <div class="calendar">
+          <div class="top">
+            <h3>November 2023 /</h3>
+            <div class="Ass">
+              <button class="button button--bestia" id="changeZIndexButton">
+                <div class="button__bg"></div>
+                <span>+</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="NONE days-1">SUN</div>
+          <div class="NONE days-2">MON</div>
+          <div class="NONE days-3">TUE</div>
+          <div class="NONE days-4">WED</div>
+          <div class="NONE days-5">THU</div>
+          <div class="NONE days-6">FRI</div>
+          <div class="NONE days-7">SAT</div>
+          <!-- Numbers -->
+          <label class="NONE sun dayN"></label>
+          <label class="NONE mon dayN"></label>
+          <label class="NONE tue dayN"></label>
+          <label class="NONE wed dayN"></label>
+          <label class="NONE thu dayN"></label>
+          <label class="NONE fri dayN"></label>
+          <label class="NONE sat dayN"></label>
+          <div class="bars">
+            <div class="bars2">
+              <!--Borders-->
+              <div class="bord bord1"></div>
+              <div class="bord bord2"></div>
+              <div class="bord bord3"></div>
+              <div class="bord bord4"></div>
+              <div class="bord bord5"></div>
+              <div class="bord bord6"></div>
+              <div class="bord bord7"></div>
+              <div class="bord bord8"></div>
+              <div class="bord bord9"></div>
+              <div class="bord bord10"></div>
+              <div class="bord bord11"></div>
+              <div class="bord bord12"></div>
+              <div class="bord bord13"></div>
+              <div class="bord bord14"></div>
+              <div class="bord bord15"></div>
+              <div class="bord bord16"></div>
+              <div class="bord bord17"></div>
+              <div class="bord bord18"></div>
+              <div class="bord bord19"></div>
+              <div class="bord bord20"></div>
+              <div class="bord bord21"></div>
+              <div class="bord bord22"></div>
+              <div class="bord bord23"></div>
+              <div class="bord bord24"></div>
+              <div class="bord bord25"></div>
+              <div class="bord bord26"></div>
+
+              <!--Timings-->
+              <div class="time All">All day</div>
+              <div class="time AM12">12 AM</div>
+              <div class="time AM1">01 AM</div>
+              <div class="time AM2">02 AM</div>
+              <div class="time AM3">03 AM</div>
+              <div class="time AM4">04 AM</div>
+              <div class="time AM5">05 AM</div>
+              <div class="time AM6">06 AM</div>
+              <div class="time AM7">07 AM</div>
+              <div class="time AM8">08 AM</div>
+              <div class="time AM9">09 AM</div>
+              <div class="time AM10">10 AM</div>
+              <div class="time AM11">11 AM</div>
+              <div class="time PM12">12 PM</div>
+              <div class="time PM1">01 PM</div>
+              <div class="time PM2">02 PM</div>
+              <div class="time PM3">03 PM</div>
+              <div class="time PM4">04 PM</div>
+              <div class="time PM5">05 PM</div>
+              <div class="time PM6">06 PM</div>
+              <div class="time PM7">07 PM</div>
+              <div class="time PM8">08 PM</div>
+              <div class="time PM9">09 PM</div>
+              <div class="time PM10">10 PM</div>
+              <div class="time PM11">11 PM</div>
+              <div class="time AM00">00 AM</div>
+
+              <!-- BOXES -->
+              <div class="slot1 Practical">
+                <div class="Prac">Practical</div>
+              </div>
+
+              <div class="slot2 Tutorial">
+                <div class="Tut">Tutorial</div>
+              </div>
+              <div class="slot3 Lecture">
+                <div class="Lect">Lecture</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script>
+      function themeF() {}
+      const Theme = document.getElementById("Theme");
+      Theme.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+      function pageLoad() {
+        displayDay();
+        displayDate();
+        updateWeekNumbers();
+        themeF();
+      }
+      var draggableDiv = document.getElementById("mydiv");
+      var isDragging = false;
+      var offsetX, offsetY;
+
+      draggableDiv.addEventListener("mousedown", function (e) {
+        isDragging = true;
+        offsetX = e.clientX - draggableDiv.getBoundingClientRect().left;
+        offsetY = e.clientY - draggableDiv.getBoundingClientRect().top;
+      });
+
+      document.addEventListener("mousemove", function (e) {
+        if (isDragging) {
+          var x = e.clientX - offsetX;
+          var y = e.clientY - offsetY;
+          draggableDiv.style.left = x + "px";
+          draggableDiv.style.top = y + "px";
+        }
+      });
+
+      document.addEventListener("mouseup", function () {
+        isDragging = false;
+      });
+
+      // Make the text input editable
+      var editableTextBox = document.getElementById("editableTextBox");
+      editableTextBox.addEventListener("dblclick", function () {
+        editableTextBox.removeAttribute("readonly");
+      });
+
+      editableTextBox.addEventListener("blur", function () {
+        editableTextBox.setAttribute("readonly", "readonly");
+      });
+
+      //LOLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+      function updateWeekNumbers() {
+        const currentDate = new Date();
+        const labels = document.querySelectorAll(
+          ".sun, .mon, .tue, .wed, .thu, .fri, .sat"
+        );
+
+        // Calculate the start of the current week (Sunday)
+        const startDate = new Date(currentDate);
+        startDate.setDate(currentDate.getDate() - currentDate.getDay());
+
+        // Loop through the labels and update their text content with day numbers
+        labels.forEach((label, index) => {
+          const date = new Date(startDate);
+          date.setDate(startDate.getDate() + index);
+          const dayNumber = date.getDate();
+
+          // Wrap around for days below 1 (previous month) or above 31 (next month)
+          label.textContent =
+            dayNumber <= 0
+              ? 31 + dayNumber
+              : dayNumber > 31
+              ? dayNumber - 31
+              : dayNumber;
+        });
+      }
+
+      updateWeekNumbers();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="faltu.js"></script>
+    <script src="ghatiya.js"></script>
+  </body>
+</html>
